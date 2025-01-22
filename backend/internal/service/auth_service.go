@@ -2,9 +2,9 @@
 package service
 
 import (
-	"github.com/cos-plat/backend/internal/model"
-	"github.com/cos-plat/backend/internal/pkg/auth"
-	"github.com/cos-plat/backend/internal/repository"
+	"github.com/user-authentication-go/backend/internal/model"
+	"github.com/user-authentication-go/backend/internal/pkg/auth"
+	"github.com/user-authentication-go/backend/internal/repository"
 
 	"golang.org/x/crypto/bcrypt"
 )
