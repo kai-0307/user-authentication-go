@@ -1,4 +1,4 @@
-module github.com/cos-plat/backend
+module github.com/user-authentication-go/backend
 
 go 1.23.4
 
