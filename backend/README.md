@@ -110,8 +110,11 @@ curl -X POST http://localhost:8080/api/auth/register \
 成功してユーザーが作成され、以下の情報が返却される想定
 
 UUID: "f89648fd-e45e-429b-b202-f2beb9f47851"
+
 ユーザー名: "testuser"
+
 メール: "test@example.com"
+
 タイムスタンプ情報も正しく記録
 
 ### 登録したユーザーでログイン
