@@ -2,7 +2,7 @@
 package repository
 
 import (
-	"github.com/cos-plat/backend/internal/model"
+	"github.com/user-authentication-go/backend/internal/model"
 	"gorm.io/gorm"
 )
 
