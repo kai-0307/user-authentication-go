@@ -1,71 +1,101 @@
-# PostgreSQL がインストールされているか確認
+### PostgreSQL がインストールされているか確認
 
+```
 postgres --version
+```
 
-# もしインストールされていない場合（Mac の場合）
+### もしインストールされていない場合（Mac の場合）
 
+```
 brew install postgresql@14
+```
 
-# Homebrew でインストールした場合（Mac）
+### Homebrew でインストールした場合（Mac）
 
+```
 brew services start postgresql
+```
 
-# または
+または
 
+```
 pg_ctl -D /usr/local/var/postgres start
+```
 
-# PostgreSQL に接続
+### PostgreSQL に接続
 
+```
 psql postgres
+```
 
-# データベース作成
+### データベース作成
 
-CREATE DATABASE cos_plat;
+```
+CREATE DATABASE testdb;
+```
 
-# ユーザーの確認（必要な場合）
+### ユーザーの確認（必要な場合）
 
+```
 \du
+```
 
-# データベースの確認
+### データベースの確認
 
+```
 \l
+```
 
-# サービスの状態確認（Mac）
+### サービスの状態確認（Mac）
 
+```
 brew services list
+```
 
-# または
+または
 
+```
 pg_ctl status -D /usr/local/var/postgres
+```
 
-# データベースの URL を環境に合わせて設定
+### データベースの URL を環境に合わせて設定
 
-export POSTGRESQL_URL='postgres://postgres:your_password@localhost:5432/cos_plat?sslmode=disable'
+```
+export POSTGRESQL_URL='postgres://postgres:your_password@localhost:5432/testdb?sslmode=disable'
+```
 
-# マイグレーションを実行
+### マイグレーションを実行
 
+```
 migrate -database ${POSTGRESQL_URL} -path backend/migrations up
+```
 
-# データベースに接続
+### データベースに接続
 
-psql cos_plat
+```
+psql testdb
+```
 
-# テーブル一覧を表示
+### テーブル一覧を表示
 
+```
 \dt
+```
 
-# users テーブルの構造を確認
+### users テーブルの構造を確認
 
+```
 \d users
+```
 
-# ヘルスチェック
+### ヘルスチェック
 
 ```
 $ curl http://localhost:8080/api/health
 {"status":"ok"}%
 ```
 
-# ユーザー登録
+### ユーザー登録
 
 ```
 curl -X POST http://localhost:8080/api/auth/register \
@@ -84,7 +114,7 @@ UUID: "f89648fd-e45e-429b-b202-f2beb9f47851"
 メール: "test@example.com"
 タイムスタンプ情報も正しく記録
 
-# 登録したユーザーでログイン
+### 登録したユーザーでログイン
 
 ```
 curl -X POST http://localhost:8080/api/auth/login \
@@ -97,7 +127,7 @@ curl -X POST http://localhost:8080/api/auth/login \
 
 成功して JWT トークンが発行
 
-# 取得したトークンを使ってプロフィールを取得
+### 取得したトークンを使ってプロフィールを取得
 
 ```
 curl http://localhost:8080/api/user/profile \
