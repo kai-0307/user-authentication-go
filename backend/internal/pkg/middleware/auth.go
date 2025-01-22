@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/cos-plat/backend/internal/pkg/auth"
+	"github.com/user-authentication-go/backend/internal/pkg/auth"
 	"github.com/gin-gonic/gin"
 )
 
