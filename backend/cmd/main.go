@@ -4,13 +4,13 @@ import (
 	"log"
 	"time"
 
-	"github.com/cos-plat/backend/config"
-	"github.com/cos-plat/backend/internal/controller"
-	"github.com/cos-plat/backend/internal/model"
-	"github.com/cos-plat/backend/internal/pkg/auth"
-	"github.com/cos-plat/backend/internal/pkg/database"
-	"github.com/cos-plat/backend/internal/pkg/middleware"
-	"github.com/cos-plat/backend/internal/repository"
+	"github.com/user-authentication-go/backend/config"
+	"github.com/user-authentication-go/backend/internal/controller"
+	"github.com/user-authentication-go/backend/internal/model"
+	"github.com/user-authentication-go/backend/internal/pkg/auth"
+	"github.com/user-authentication-go/backend/internal/pkg/database"
+	"github.com/user-authentication-go/backend/internal/pkg/middleware"
+	"github.com/user-authentication-go/backend/internal/repository"
 	"github.com/gin-gonic/gin"
 )
 
