@@ -1,4 +1,3 @@
-// backend/internal/model/error.go
 package model
 
 import "errors"
