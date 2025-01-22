@@ -3,7 +3,7 @@ package controller
 import (
 	"net/http"
 
-	"github.com/cos-plat/backend/internal/repository"
+	"github.com/user-authentication-go/backend/internal/repository"
 	"github.com/gin-gonic/gin"
 )
 
