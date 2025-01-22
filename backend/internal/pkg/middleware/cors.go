@@ -1,4 +1,3 @@
-// pkg/middleware/cors.go
 package middleware
 
 import (
